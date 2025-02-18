@@ -1,0 +1,211 @@
+header {
+    border: 1px solid black;
+    .container {
+        @include display-flex;
+        justify-content: space-between;
+        position: relative;
+        &::before {
+            opacity: 0.8;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: "";
+            background-color: black;
+        }
+
+        .logo-header {
+            a {
+                img {
+                    transform: rotate(5deg);
+                    width: 6rem;
+                }
+            }
+        }
+
+        .list-part-header {
+            .ul-header {
+                @include display-flex;
+                gap: 40px;
+
+                .li-header {
+                    position: relative;
+                    font-weight: 300;
+                    &::before {
+                        position: relative;
+                        content: "";
+                        background-color: $base-green-color;
+                        height: 5px;
+                        top: 61.7px;
+                        display: block;
+                        width: 0;
+                        transition: all 0.2s;
+                    }
+
+                    a {
+                        padding: 40px 0;
+                        color: white;
+                    }
+
+                    &:hover::before {
+                        width: 100%;
+                    }
+
+                    .dropdown {
+                        width: 9rem;
+                        position: absolute;
+                        opacity: 0;
+                        left: 30%;
+                        top: 4.1rem;
+                        background-color: black;
+                        transition: all 0.3s;
+                        padding: 14px 10px;
+                        border-radius: 3px;
+
+                        .ul-dropdown {
+                            top: 100%;
+                            @include flex-column;
+                            gap: 0px;
+
+                            .dropdown-li {
+                                width: 100%;
+                                padding: 3px 0;
+
+                                &:first-child {
+                                    border-bottom: 1px solid rgba(255, 255, 255, 0.297);
+                                    padding-bottom: 5px;
+                                }
+
+                                a {
+                                    @include display-flex;
+                                    padding: 0px;
+                                    i{
+                                        font-size: 13px;
+                                    }
+                                }
+
+                                &::before {
+                                    position: relative;
+                                    content: "";
+                                    background-color: $base-green-color;
+                                    height: 3px;
+                                    top: 30px;
+                                    display: block;
+                                    width: 0;
+                                    transition: all 0.2s;
+                                }
+
+                                &:hover {
+                                    &::before {
+                                        width: 40%;
+                                    }
+
+                                    a {
+                                        color: $base-green-color;
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover .dropdown {
+                        left: 0;
+                        opacity: 0.8;
+                    }
+
+                    &:last-child::before {
+                        width: 100%;
+                        display: none
+                    }
+
+                    .login-register {
+                        @include display-flex;
+
+                        .login-register-part {
+                            cursor: pointer;
+                            padding: 7px 25px;
+                            border-radius: 30px;
+                            background-color: $base-green-color;
+                            transition: 0.4s;
+                            color: white;
+                            font-weight: 600;
+                            &::before {
+                                display: none;
+                            }
+
+                            &:hover {
+                                @include btn-hover;
+                            }
+                        }
+
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .menu-bar-responsive {
+            display: none;
+            z-index: 1;
+
+            .fa-bars {
+                font-size: 20px;
+                color: white;
+            }
+        }
+    }
+}
+
+
+// .wrapper{
+    
+// }
+
+@media (max-width:991px) {
+    header{
+        .container{
+            .list-part-header{
+                .ul-header{
+                    gap: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:768px){
+    header{
+        .container{
+            .list-part-header{
+                .ul-header{
+                    gap: 10px;
+                    .li-header{
+                        font-size: 15px;
+                        .login-register{
+                            gap: 10px;
+                            .login-register-part{
+                                padding: 5px 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:576px) {
+    header{
+        .container{
+            .list-part-header{
+                display: none;
+            }
+            .menu-bar-responsive{
+                display: block;
+            }
+        }
+    }
+}

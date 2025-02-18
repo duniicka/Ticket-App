@@ -1,0 +1,13 @@
+.for-backimage{
+    height: 100vh;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    // z-index: 999;
+    background-image: url(https://assets.unileversolutions.com/v1/985812.jpg);
+}
+.container{
+    padding: 0 50px;
+    @include container-responsive
+}
