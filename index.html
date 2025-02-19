@@ -14,51 +14,181 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Swiper cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- Main css -->
   <link rel="stylesheet" href="./src/css/main.css">
   <title>Ticket app</title>
+
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+    .swiper {
+      width: 100%;
+      padding-top: 150px;
+      padding-bottom: 50px;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 850px;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+
+    .swiper2 {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper2-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper2-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
 </head>
 
 <body>
-  <div class="for-backimage">
-    <header>
-      <div class="container">
-        <div class="logo-header">
-          <a href=""><img src="./src/images/header-logo.png" alt=""></a>
-        </div>
-        <div class="list-part-header">
-          <ul class="ul-header">
-            <li class="li-header"><a href="">Home</a></li>
-            <li class="li-header"><a href="">Events</a></li>
-            <li class="li-header"><a href="">Shop</a>
-              <div class="dropdown">
-                <ul class="ul-dropdown">
-                  <li class="dropdown-li"><a href=""><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
-                  <li class="dropdown-li"><a href=""><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="li-header"><a href="">Contact</a></li>
-            <li class="li-header">
-              <ul class="login-register">
-                <li class="li-header login-register-part">
-                  Login
-                </li>
-                <li class="li-header login-register-part">
-                  Sign up
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="menu-bar-responsive">
-          <i class="fa-solid fa-bars"></i>
-        </div>
+  <!-- <div class="for-backimage"> -->
+  <header>
+    <div class="container">
+      <div class="logo-header">
+        <a href=""><img src="./src/images/header-logo.png" alt=""></a>
       </div>
-    </header>
+      <div class="list-part-header">
+        <ul class="ul-header">
+          <li class="li-header"><a href="">Home</a></li>
+          <li class="li-header"><a href="">Events</a></li>
+          <li class="li-header"><a href="">Shop</a>
+            <div class="dropdown">
+              <ul class="ul-dropdown">
+                <li class="dropdown-li"><a href=""><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                <li class="dropdown-li"><a href=""><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="li-header"><a href="">Contact</a></li>
+          <li class="li-header">
+            <ul class="login-register">
+              <li class="btn-bgreen li-header login-register-part">
+                Login
+              </li>
+              <li class="btn-bgreen li-header login-register-part">
+                Sign up
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="menu-bar-responsive">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+  </header>
 
-    
-  </div>
+  <main>
+    <section class="concert-slides">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./src/images/slide1.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./src/images/slide2.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./src/images/slide3.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./src/images/slide4.jpg" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <section class="ticket-types">
+      <div class="ticket-type">
+        <h1>Popular events</h1>
+        <img src="./src/images/popular-events.jpg" alt="">
+      </div>
+      <div class="ticket-type">
+        <h1>Tourism</h1>
+        <img src="./src/images/tourism.jpg" alt="">
+      </div>
+      <div class="ticket-type">
+        <h1>Weekend</h1>
+        <img src="./src/images/weekend.jpg" alt="">
+      </div>
+    </section>
+
+    <section class="movies-for-children">
+      <h2>Movies for kids</h2>
+      <!-- <div class="swiper mySwiper2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper2-slide">Slide 9</div>
+        </div>
+      </div> -->
+    </section>
+  </main>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      autoplay: {
+        delay: 2000,
+      },
+      speed: 700,
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      }
+    });
+
+  
+  </script>
+
+  <script type="module" src="./src/js/main.js"></script>
 </body>
 
 </html>

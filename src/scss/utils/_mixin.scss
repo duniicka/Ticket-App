@@ -21,3 +21,15 @@
         padding: 0 7px;
     }
 }
+@mixin btn-green{
+    cursor: pointer;
+    padding: 7px 25px;
+    border-radius: 30px;
+    background-color: $base-green-color;
+    transition: 0.4s;
+    color: white;
+    font-weight: 600;
+    &:hover {
+        @include btn-hover;
+    }
+}

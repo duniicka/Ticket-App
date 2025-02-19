@@ -1,17 +1,21 @@
 header {
-    border: 1px solid black;
+    // position: fixed;
+    width: 100%;
+    z-index: 999;
+    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     .container {
         @include display-flex;
         justify-content: space-between;
         position: relative;
+
         &::before {
-            opacity: 0.8;
             position: absolute;
             left: 0;
             width: 100%;
             height: 100%;
             content: "";
-            background-color: black;
+            background-color: rgba(72, 125, 66, 0.845);
         }
 
         .logo-header {
@@ -31,12 +35,13 @@ header {
                 .li-header {
                     position: relative;
                     font-weight: 300;
+
                     &::before {
                         position: relative;
                         content: "";
                         background-color: $base-green-color;
                         height: 5px;
-                        top: 61.7px;
+                        top: 60px;
                         display: block;
                         width: 0;
                         transition: all 0.2s;
@@ -52,12 +57,13 @@ header {
                     }
 
                     .dropdown {
+                        z-index: 999;
                         width: 9rem;
                         position: absolute;
                         opacity: 0;
                         left: 30%;
-                        top: 4.1rem;
-                        background-color: black;
+                        top: 4rem;
+                        background-color: rgb(7, 49, 2);
                         transition: all 0.3s;
                         padding: 14px 10px;
                         border-radius: 3px;
@@ -79,7 +85,8 @@ header {
                                 a {
                                     @include display-flex;
                                     padding: 0px;
-                                    i{
+
+                                    i {
                                         font-size: 13px;
                                     }
                                 }
@@ -89,7 +96,7 @@ header {
                                     content: "";
                                     background-color: $base-green-color;
                                     height: 3px;
-                                    top: 30px;
+                                    top: 26px;
                                     display: block;
                                     width: 0;
                                     transition: all 0.2s;
@@ -111,7 +118,7 @@ header {
 
                     &:hover .dropdown {
                         left: 0;
-                        opacity: 0.8;
+                        opacity: 1;
                     }
 
                     &:last-child::before {
@@ -123,19 +130,8 @@ header {
                         @include display-flex;
 
                         .login-register-part {
-                            cursor: pointer;
-                            padding: 7px 25px;
-                            border-radius: 30px;
-                            background-color: $base-green-color;
-                            transition: 0.4s;
-                            color: white;
-                            font-weight: 600;
                             &::before {
                                 display: none;
-                            }
-
-                            &:hover {
-                                @include btn-hover;
                             }
                         }
 
@@ -160,15 +156,12 @@ header {
 }
 
 
-// .wrapper{
-    
-// }
 
 @media (max-width:991px) {
-    header{
-        .container{
-            .list-part-header{
-                .ul-header{
+    header {
+        .container {
+            .list-part-header {
+                .ul-header {
                     gap: 20px;
                 }
             }
@@ -176,17 +169,20 @@ header {
     }
 }
 
-@media(max-width:768px){
-    header{
-        .container{
-            .list-part-header{
-                .ul-header{
+@media(max-width:768px) {
+    header {
+        .container {
+            .list-part-header {
+                .ul-header {
                     gap: 10px;
-                    .li-header{
+
+                    .li-header {
                         font-size: 15px;
-                        .login-register{
+
+                        .login-register {
                             gap: 10px;
-                            .login-register-part{
+
+                            .login-register-part {
                                 padding: 5px 20px;
                             }
                         }
@@ -198,12 +194,37 @@ header {
 }
 
 @media (max-width:576px) {
-    header{
-        .container{
-            .list-part-header{
+    header {
+        .container {
+            .logo-header{
+                img{
+                    width: 4.5rem !important;
+                }
+            }
+            .list-part-header {
                 display: none;
             }
-            .menu-bar-responsive{
+
+            .menu-bar-responsive {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width:320px) {
+    header {
+        .container {
+            .logo-header{
+                img{
+                    width: 3rem !important;
+                }
+            }
+            .list-part-header {
+                display: none;
+            }
+
+            .menu-bar-responsive {
                 display: block;
             }
         }
