@@ -1,13 +1,179 @@
-.for-backimage{
-    height: 100vh;
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    // z-index: 999;
-    background-image: url(https://assets.unileversolutions.com/v1/985812.jpg);
+main{
+    .concert-slides{
+        background-image: url(https://img.freepik.com/free-photo/textured-paint-background-wallpaper-green-acrylic-paint_53876-133241.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .ticket-types {
+        @include display-flex;
+        gap: 0;
+    
+        .ticket-type {
+            position: relative;
+            cursor: pointer;
+            transition: all 2s;
+           img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+    
+            h1 {
+                padding: 10px;
+                text-align: center;
+                width: 100%;
+                color: white;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                position: absolute;
+                font-weight: 900;
+                font-size: 50px;
+            }
+    
+    
+            &::before {
+                position: absolute;
+                height: 6px;
+                width: 60px;
+                bottom: 7px;
+                left: 50px;
+                content: "";
+                opacity: 0.8;
+                background-color: $base-green-color;
+            }
+    
+            &:hover::before {
+                animation: green-card-hover1 0.1s forwards, green-card-hover2 0.3s 0.1s forwards,
+    
+            }
+    
+            
+        }
+        .after-hover::before {
+            animation: green-card-hover3 0.3s forwards,
+            green-card-hover4 0.3s 0.2s forwards;
+        }
+    }
+
+    .movies-for-children{
+        top: 0;
+        h2{
+             color: $base-green-color;
+        }
+    }
 }
-.container{
-    padding: 0 50px;
-    @include container-responsive
+
+
+
+@keyframes green-card-hover1 {
+    0% {
+        height: 6px;
+        width: 60px;
+        left: 50px;
+    }
+
+    100% {
+        left: 0;
+        width: 100%;
+    }
+}
+
+@keyframes green-card-hover2 {
+    0% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        left: 0;
+        width: 100%;
+        height: calc(100% - 7px);
+    }
+}
+
+@keyframes green-card-hover3 {
+    0% {
+        left: 0;
+        width: 100%;
+        height: calc(100% - 7px);
+
+    }
+
+    100% {
+        left: 50px;
+        width: 60px;
+        height: calc(100% - 7px);
+    }
+}
+
+@keyframes green-card-hover4{
+    0%{
+        left: 50px;
+        width: 60px;
+        height: calc(100% - 7px);
+    }
+    100%{
+        height: 6px;
+    }
+}
+
+
+@media (max-width:991px) {
+    .ticket-types{
+        .ticket-type{
+            h1{
+                font-size: 29px;
+            }
+        }
+    }
+    .swiper-slide{
+        width: 650px !important;
+    }
+}
+
+@media (max-width:768px) {
+    .ticket-types{
+        .ticket-type{
+
+            h1{
+                font-size: 20px;
+            }
+        }
+    }.swiper-slide{
+        width: 500px !important;
+    }
+}
+
+@media (max-width:576px) {
+    .ticket-types{
+        @include flex-column;
+        gap: 0;
+        .ticket-type{
+            height: 340px;
+            width: 100%;
+            object-fit: none;
+            h1{
+                font-size: 25px;
+            }
+            &::before{
+                display: none;
+            }
+        }
+    }
+    .swiper{
+        padding-top: 90px !important;
+        padding-bottom: 20px !important;
+        .swiper-slide{
+            width: 100% !important;
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .swiper{
+        padding-top: 60px !important;
+        padding-bottom: 7px !important;
+    }
 }
