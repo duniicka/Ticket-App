@@ -38,6 +38,7 @@
 }
 
 header {
+  position: fixed;
   width: 100%;
   z-index: 999;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
@@ -55,7 +56,7 @@ header .container::before {
   width: 100%;
   height: 100%;
   content: "";
-  background-color: rgba(72, 125, 66, 0.845);
+  background-color: rgba(153, 187, 149, 0.977);
 }
 header .container .logo-header a img {
   transform: rotate(5deg);
@@ -211,7 +212,7 @@ header .container .menu-bar-responsive .fa-bars {
   }
 }
 main .concert-slides {
-  background-image: url(https://img.freepik.com/free-photo/textured-paint-background-wallpaper-green-acrylic-paint_53876-133241.jpg);
+  background-image: url(../images/background.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -223,8 +224,8 @@ main .ticket-types {
 }
 main .ticket-types .ticket-type {
   position: relative;
-  cursor: pointer;
   transition: all 2s;
+  width: 100%;
 }
 main .ticket-types .ticket-type img {
   width: 100%;
@@ -261,10 +262,30 @@ main .ticket-types .after-hover::before {
   animation: green-card-hover3 0.3s forwards, green-card-hover4 0.3s 0.2s forwards;
 }
 main .movies-for-children {
-  top: 0;
+  overflow: hidden;
+  padding: 70px 0;
 }
 main .movies-for-children h2 {
+  font-size: 35px;
+  margin-left: 50px;
   color: rgb(10, 145, 31);
+}
+main .movies-for-children .swiper2 .swiper-wrapper {
+  width: 100%;
+}
+main .movies-for-children .swiper2 .swiper-wrapper .swiper-slide {
+  margin-left: 0;
+  overflow: hidden;
+  width: 25%;
+}
+main .movies-for-children .swiper2 .swiper-wrapper .swiper-slide img {
+  position: relative;
+  transition: 0.2s;
+  width: 100%;
+  height: 100%;
+}
+main .movies-for-children .swiper2 .swiper-wrapper .swiper-slide:hover img {
+  transform: scale(1.2);
 }
 
 @keyframes green-card-hover1 {
@@ -312,22 +333,32 @@ main .movies-for-children h2 {
   }
 }
 @media (max-width: 991px) {
-  .ticket-types .ticket-type h1 {
-    font-size: 29px;
+  .concert-slides .swiper1 .swiper-slide {
+    width: 700px;
   }
-  .swiper-slide {
-    width: 650px !important;
+  .ticket-types .ticket-type h1 {
+    font-size: 29px !important;
+  }
+  .swiper2 .swiper-wrapper .swiper-slide {
+    width: 32% !important;
   }
 }
 @media (max-width: 768px) {
-  .ticket-types .ticket-type h1 {
-    font-size: 20px;
+  .concert-slides .swiper1 .swiper-slide {
+    width: 550px;
   }
-  .swiper-slide {
-    width: 500px !important;
+  .ticket-types .ticket-type h1 {
+    font-size: 20px !important;
   }
 }
 @media (max-width: 576px) {
+  .concert-slides .swiper1 {
+    padding-top: 100px !important;
+    padding-bottom: 20px !important;
+  }
+  .concert-slides .swiper1 .swiper-slide {
+    width: 100%;
+  }
   .ticket-types {
     display: flex;
     align-items: center;
@@ -348,16 +379,34 @@ main .movies-for-children h2 {
     display: none;
   }
   .swiper {
-    padding-top: 90px !important;
-    padding-bottom: 20px !important;
-  }
-  .swiper .swiper-slide {
-    width: 100% !important;
-  }
-}
-@media (max-width: 576px) {
-  .swiper {
     padding-top: 60px !important;
     padding-bottom: 7px !important;
+  }
+  .movies-for-children {
+    padding: 20px 0 !important;
+  }
+  .movies-for-children h2 {
+    text-align: center;
+    margin-left: 0 !important;
+  }
+  .movies-for-children .swiper2 .swiper-wrapper {
+    margin: auto;
+    width: 100% !important;
+  }
+  .movies-for-children .swiper2 .swiper-wrapper .swiper-slide {
+    width: 100% !important;
+    background-color: rgb(238, 238, 238);
+  }
+  .movies-for-children .swiper2 .swiper-wrapper .swiper-slide img {
+    height: 420px !important;
+  }
+}
+@media (max-width: 320px) {
+  .concert-slides .swiper1 {
+    padding-top: 65px !important;
+    padding-bottom: 10px !important;
+  }
+  .concert-slides .swiper1 .swiper-slide {
+    width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */
