@@ -1,5 +1,5 @@
 header {
-    // position: fixed;
+    position: fixed;
     width: 100%;
     z-index: 999;
     
@@ -15,7 +15,7 @@ header {
             width: 100%;
             height: 100%;
             content: "";
-            background-color: rgba(72, 125, 66, 0.845);
+            background-color: rgba(153, 187, 149, 0.977)
         }
 
         .logo-header {
@@ -178,7 +178,6 @@ header {
 
                     .li-header {
                         font-size: 15px;
-
                         .login-register {
                             gap: 10px;
 
