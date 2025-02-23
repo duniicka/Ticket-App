@@ -11,15 +11,15 @@
   cursor: pointer;
   padding: 7px 25px;
   border-radius: 30px;
-  background-color: rgb(10, 145, 31);
+  background-color: rgb(59, 59, 59);
   transition: 0.4s;
   color: white;
   font-weight: 600;
 }
 .btn-bgreen:hover {
-  background-color: rgb(10, 145, 31);
+  background-color: rgb(59, 59, 59);
   color: white;
-  box-shadow: 0 0 25px -3px rgb(10, 145, 31);
+  box-shadow: 0 0 25px -3px rgb(59, 59, 59);
   transform: translateY(-2px);
 }
 
@@ -56,7 +56,7 @@ header .container::before {
   width: 100%;
   height: 100%;
   content: "";
-  background-color: rgba(153, 187, 149, 0.977);
+  background-color: rgb(17, 17, 17);
 }
 header .container .logo-header a img {
   transform: rotate(5deg);
@@ -75,7 +75,7 @@ header .container .list-part-header .ul-header .li-header {
 header .container .list-part-header .ul-header .li-header::before {
   position: relative;
   content: "";
-  background-color: rgb(10, 145, 31);
+  background-color: rgb(59, 59, 59);
   height: 5px;
   top: 60px;
   display: block;
@@ -96,7 +96,7 @@ header .container .list-part-header .ul-header .li-header .dropdown {
   opacity: 0;
   left: 30%;
   top: 4rem;
-  background-color: rgb(7, 49, 2);
+  background-color: rgb(17, 17, 17);
   transition: all 0.3s;
   padding: 14px 10px;
   border-radius: 3px;
@@ -112,10 +112,11 @@ header .container .list-part-header .ul-header .li-header .dropdown .ul-dropdown
 header .container .list-part-header .ul-header .li-header .dropdown .ul-dropdown .dropdown-li {
   width: 100%;
   padding: 3px 0;
-}
-header .container .list-part-header .ul-header .li-header .dropdown .ul-dropdown .dropdown-li:first-child {
   border-bottom: 1px solid rgba(255, 255, 255, 0.297);
   padding-bottom: 5px;
+}
+header .container .list-part-header .ul-header .li-header .dropdown .ul-dropdown .dropdown-li:last-child {
+  border: none;
 }
 header .container .list-part-header .ul-header .li-header .dropdown .ul-dropdown .dropdown-li a {
   display: flex;
@@ -129,18 +130,15 @@ header .container .list-part-header .ul-header .li-header .dropdown .ul-dropdown
 header .container .list-part-header .ul-header .li-header .dropdown .ul-dropdown .dropdown-li::before {
   position: relative;
   content: "";
-  background-color: rgb(10, 145, 31);
+  background-color: rgb(59, 59, 59);
   height: 3px;
-  top: 26px;
+  top: 27px;
   display: block;
   width: 0;
   transition: all 0.2s;
 }
 header .container .list-part-header .ul-header .li-header .dropdown .ul-dropdown .dropdown-li:hover::before {
   width: 40%;
-}
-header .container .list-part-header .ul-header .li-header .dropdown .ul-dropdown .dropdown-li:hover a {
-  color: rgb(10, 145, 31);
 }
 header .container .list-part-header .ul-header .li-header:hover .dropdown {
   left: 0;
@@ -211,29 +209,35 @@ header .container .menu-bar-responsive .fa-bars {
     display: block;
   }
 }
-main .concert-slides {
-  background-image: url(../images/background.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+.home-main {
+  padding: 7.2% 0;
+  padding-bottom: 0;
 }
-main .ticket-types {
+.home-main .concert-slides {
+  padding: 0;
+  background-color: rgb(59, 59, 59);
+  padding-bottom: 2%;
+}
+.home-main .ticket-types {
+  padding: 0;
   display: flex;
   align-items: center;
   gap: 20px;
+  background-color: rgb(59, 59, 59);
   gap: 0;
 }
-main .ticket-types .ticket-type {
+.home-main .ticket-types .ticket-type {
   position: relative;
   transition: all 2s;
   width: 100%;
 }
-main .ticket-types .ticket-type img {
+.home-main .ticket-types .ticket-type img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .ticket-types .ticket-type h1 {
+.home-main .ticket-types .ticket-type h1 {
   padding: 10px;
   text-align: center;
   width: 100%;
@@ -245,47 +249,60 @@ main .ticket-types .ticket-type h1 {
   font-weight: 900;
   font-size: 50px;
 }
-main .ticket-types .ticket-type::before {
+.home-main .ticket-types .ticket-type::before {
   position: absolute;
   height: 6px;
   width: 60px;
-  bottom: 7px;
+  bottom: 6px;
   left: 50px;
   content: "";
   opacity: 0.8;
-  background-color: rgb(10, 145, 31);
+  background-color: rgb(17, 17, 17);
 }
-main .ticket-types .ticket-type:hover::before {
+.home-main .ticket-types .ticket-type:hover::before {
   animation: green-card-hover1 0.1s forwards, green-card-hover2 0.3s 0.1s forwards;
 }
-main .ticket-types .after-hover::before {
+.home-main .ticket-types .after-hover::before {
   animation: green-card-hover3 0.3s forwards, green-card-hover4 0.3s 0.2s forwards;
 }
-main .movies-for-children {
+.home-main .movies-for-children {
+  background-color: rgb(59, 59, 59);
   overflow: hidden;
   padding: 70px 0;
 }
-main .movies-for-children h2 {
-  font-size: 35px;
-  margin-left: 50px;
-  color: rgb(10, 145, 31);
+
+.swiper2 {
+  padding: 0 !important;
 }
-main .movies-for-children .swiper2 .swiper-wrapper {
+.swiper2 .swiper-wrapper {
   width: 100%;
+  background-color: rgb(59, 59, 59);
 }
-main .movies-for-children .swiper2 .swiper-wrapper .swiper-slide {
+.swiper2 .swiper-wrapper .swiper-slide {
+  border-radius: 5px;
   margin-left: 0;
   overflow: hidden;
   width: 25%;
+  background-color: rgb(59, 59, 59);
 }
-main .movies-for-children .swiper2 .swiper-wrapper .swiper-slide img {
+.swiper2 .swiper-wrapper .swiper-slide img {
   position: relative;
   transition: 0.2s;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
-main .movies-for-children .swiper2 .swiper-wrapper .swiper-slide:hover img {
+.swiper2 .swiper-wrapper .swiper-slide:hover img {
   transform: scale(1.2);
+}
+
+.swiper2-heading {
+  font-size: 35px;
+  margin-left: 50px;
+  color: white;
 }
 
 @keyframes green-card-hover1 {
@@ -307,54 +324,95 @@ main .movies-for-children .swiper2 .swiper-wrapper .swiper-slide:hover img {
   100% {
     left: 0;
     width: 100%;
-    height: calc(100% - 7px);
+    height: calc(100% - 6px);
   }
 }
 @keyframes green-card-hover3 {
   0% {
     left: 0;
     width: 100%;
-    height: calc(100% - 7px);
+    height: calc(100% - 6px);
   }
   100% {
     left: 50px;
     width: 60px;
-    height: calc(100% - 7px);
+    height: calc(100% - 6px);
   }
 }
 @keyframes green-card-hover4 {
   0% {
     left: 50px;
     width: 60px;
-    height: calc(100% - 7px);
+    height: calc(100% - 6px);
   }
   100% {
     height: 6px;
   }
 }
 @media (max-width: 991px) {
-  .concert-slides .swiper1 .swiper-slide {
-    width: 700px;
+  .home-main {
+    padding-top: 10%;
   }
-  .ticket-types .ticket-type h1 {
+  .home-main .concert-slides {
+    padding: 0 !important;
+    padding-bottom: 2% !important;
+  }
+  .home-main .ticket-types {
+    padding: 0 !important;
+  }
+  .home-main .ticket-types .ticket-type h1 {
     font-size: 29px !important;
+  }
+  .swiper2 {
+    padding: 0 !important;
   }
   .swiper2 .swiper-wrapper .swiper-slide {
     width: 32% !important;
   }
 }
 @media (max-width: 768px) {
-  .concert-slides .swiper1 .swiper-slide {
-    width: 550px;
+  .home-main {
+    padding-top: 12%;
   }
-  .ticket-types .ticket-type h1 {
+  .home-main .concert-slides {
+    padding-top: 10px !important;
+  }
+  .home-main .ticket-types .ticket-type h1 {
     font-size: 20px !important;
   }
 }
 @media (max-width: 576px) {
+  .home-main {
+    padding-top: 0 !important;
+  }
+  .home-main .concert-slides .swiper1 {
+    padding-top: 16% !important;
+  }
+  .home-main .swiper {
+    padding-top: 60px !important;
+  }
+  .home-main .movies-for-children {
+    padding: 20px 0 !important;
+  }
+  .swiper2 .swiper-wrapper {
+    margin: auto;
+    width: 100% !important;
+  }
+  .swiper2 .swiper-wrapper .swiper-slide {
+    background-color: rgb(59, 59, 59);
+  }
+  .swiper2 .swiper-wrapper .swiper-slide img {
+    height: 250px !important;
+  }
+  .swiper2-heading {
+    text-align: center;
+    margin-left: 0 !important;
+  }
+}
+@media (max-width: 320px) {
   .concert-slides .swiper1 {
-    padding-top: 100px !important;
-    padding-bottom: 20px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0 !important;
   }
   .concert-slides .swiper1 .swiper-slide {
     width: 100%;
@@ -378,35 +436,217 @@ main .movies-for-children .swiper2 .swiper-wrapper .swiper-slide:hover img {
   .ticket-types .ticket-type::before {
     display: none;
   }
-  .swiper {
-    padding-top: 60px !important;
-    padding-bottom: 7px !important;
+}
+main {
+  background-color: rgb(59, 59, 59);
+}
+main .swiper2-section {
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .swiper2-section {
+    padding-bottom: 0 !important;
   }
-  .movies-for-children {
-    padding: 20px 0 !important;
+}
+main section {
+  padding: 9rem 0;
+}
+main section form {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+  width: 40%;
+  margin: 0 auto;
+  justify-content: center;
+  background-color: rgb(17, 17, 17);
+  padding: 20px 30px;
+}
+main section form .heading-form {
+  color: white;
+}
+main section form .input-field {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+  width: 100%;
+}
+main section form .input-field div {
+  width: 100%;
+}
+main section form .input-field label {
+  color: white;
+}
+main section form .input-field p {
+  color: white;
+}
+main section form .input-field p a {
+  color: #888888;
+}
+main section form .input-field input {
+  border-radius: 3px;
+  border: none;
+  margin-top: 10px;
+  padding: 6px;
+  width: 100%;
+  outline: none;
+}
+main section form .input-field button {
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(59, 59, 59);
+  border: none;
+  color: white;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+main section form .input-field button:hover {
+  background-color: rgb(59, 59, 59);
+  color: white;
+  box-shadow: 0 0 25px -3px rgb(59, 59, 59);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 991px) {
+  section {
+    padding: 8rem 0 !important;
   }
-  .movies-for-children h2 {
-    text-align: center;
-    margin-left: 0 !important;
+  section form {
+    width: 50% !important;
   }
-  .movies-for-children .swiper2 .swiper-wrapper {
-    margin: auto;
-    width: 100% !important;
+}
+@media (max-width: 768px) {
+  section {
+    padding: 8rem 0 !important;
   }
-  .movies-for-children .swiper2 .swiper-wrapper .swiper-slide {
-    width: 100% !important;
-    background-color: rgb(238, 238, 238);
+  section form {
+    width: 65% !important;
   }
-  .movies-for-children .swiper2 .swiper-wrapper .swiper-slide img {
-    height: 420px !important;
+}
+@media (max-width: 576px) {
+  section {
+    padding: 7rem 0 !important;
+  }
+  section form {
+    padding: 20px 18px !important;
+    width: 87% !important;
+  }
+  section form input {
+    padding: 3px !important;
+  }
+  section form button {
+    padding: 7px !important;
+  }
+  section form p {
+    font-size: 12px;
+  }
+  section .login {
+    height: 70vh;
   }
 }
 @media (max-width: 320px) {
-  .concert-slides .swiper1 {
-    padding-top: 65px !important;
-    padding-bottom: 10px !important;
+  section {
+    padding: 4.5rem 0 !important;
   }
-  .concert-slides .swiper1 .swiper-slide {
-    width: 100%;
+  section form {
+    width: 95% !important;
+  }
+  section form input {
+    padding: 3px !important;
+  }
+  section form button {
+    padding: 6px !important;
+  }
+  section form p {
+    font-size: 12px;
+  }
+  .login {
+    height: 80vh;
+  }
+}
+main section h2 {
+  margin-bottom: 50px;
+}
+main section .cards {
+  gap: 60px 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+main section .cards .card {
+  background-color: rgb(17, 17, 17);
+  color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+main section .cards .card .img-part img {
+  width: 100%;
+}
+main section .cards .card .content-part {
+  padding: 20px 12px;
+  display: flex;
+}
+main section .cards .card .content-part i {
+  padding-top: 6px;
+  cursor: pointer;
+}
+main section .cards .card .button-part button {
+  margin: 0 auto;
+  border: none;
+  cursor: pointer;
+  padding: 7px 25px;
+  border-radius: 30px;
+  background-color: rgb(59, 59, 59);
+  transition: 0.4s;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+}
+main section .cards .card .button-part button:hover {
+  background-color: rgb(59, 59, 59);
+  color: white;
+  box-shadow: 0 0 25px -3px rgb(59, 59, 59);
+  transform: translateY(-2px);
+}
+main section .cards .card .button-part button i {
+  font-size: 12px;
+}
+
+@media (max-width: 991px) {
+  section .container .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  section .container .cards {
+    gap: 60px 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section .container .cards .about-content h2 {
+    font-size: 20px;
+  }
+  section .container .cards .about-content p {
+    font-size: 15px;
+  }
+  section .container .cards .button-part button {
+    font-size: 13px;
+  }
+  section .container .cards .button-part button i {
+    font-size: 10px !important;
+  }
+}
+@media (max-width: 320px) {
+  section .container .cards {
+    grid-template-columns: repeat(1, 1fr);
   }
 }/*# sourceMappingURL=main.css.map */

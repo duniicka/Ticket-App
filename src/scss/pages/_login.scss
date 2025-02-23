@@ -1,0 +1,119 @@
+main {
+    section{
+        padding: 9rem 0;
+        form {
+            @include flex-column;
+            width: 40%;
+            margin: 0 auto;
+            justify-content: center;
+            background-color: $base-color1;
+            padding: 20px 30px;
+
+            .heading-form{
+                color: white;
+            }
+            .input-field {
+                @include flex-column;
+                width: 100%;
+                div {
+                    width: 100%;
+                }
+                label{
+                    color: white
+                }
+                p{
+                    color: white;
+                    a{
+                        $bg-base-color:  rgb(59, 59, 59); 
+                        color: lighten($bg-base-color, 30%);
+                    }
+                }
+                input {
+                    border-radius: 3px;
+                    border: none;
+                    margin-top: 10px;
+                    padding: 6px;
+                    width: 100%;
+                    outline: none;
+                }
+    
+                button {
+                    border-radius: 3px;
+                    cursor: pointer;
+                    width: 100%;
+                    padding: 10px;
+                    background-color: $bg-base-color;
+                    border: none;
+                    color: white;
+                    border-radius: 2px;
+                    transition: all .2s;
+                    &:hover{
+                        @include btn-hover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 991px) {
+    section{
+        padding: 8rem 0 !important;
+        form {
+            width: 50% !important;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    section{
+        padding: 8rem 0 !important;
+        form {
+            width: 65% !important;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    section{
+        padding: 7rem 0 !important;
+        form {
+            padding: 20px 18px !important;
+            width: 87% !important;
+            input{
+                padding: 3px !important;
+            }
+            button{
+                padding: 7px !important;
+            }
+            p{
+                font-size: 12px;
+            }
+        }
+        
+    .login{
+        height: 70vh;
+    }
+    }
+}
+@media (max-width: 320px) {
+    section{
+        padding: 4.5rem 0 !important;
+        form {
+            width: 95% !important;
+            input{
+                padding: 3px !important;
+            }
+            button{
+                padding: 6px !important;
+            }
+            p{
+                font-size: 12px;
+            }
+        }
+    }
+    .login{
+        height: 80vh;
+    }
+}

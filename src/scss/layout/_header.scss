@@ -15,7 +15,7 @@ header {
             width: 100%;
             height: 100%;
             content: "";
-            background-color: rgba(153, 187, 149, 0.977)
+            background-color: $base-color1
         }
 
         .logo-header {
@@ -39,7 +39,7 @@ header {
                     &::before {
                         position: relative;
                         content: "";
-                        background-color: $base-green-color;
+                        background-color: $bg-base-color;
                         height: 5px;
                         top: 60px;
                         display: block;
@@ -63,7 +63,7 @@ header {
                         opacity: 0;
                         left: 30%;
                         top: 4rem;
-                        background-color: rgb(7, 49, 2);
+                        background-color: $base-color1;
                         transition: all 0.3s;
                         padding: 14px 10px;
                         border-radius: 3px;
@@ -76,10 +76,10 @@ header {
                             .dropdown-li {
                                 width: 100%;
                                 padding: 3px 0;
-
-                                &:first-child {
-                                    border-bottom: 1px solid rgba(255, 255, 255, 0.297);
-                                    padding-bottom: 5px;
+                                border-bottom: 1px solid rgba(255, 255, 255, 0.297);
+                                padding-bottom: 5px;
+                                &:last-child {
+                                    border: none
                                 }
 
                                 a {
@@ -94,9 +94,9 @@ header {
                                 &::before {
                                     position: relative;
                                     content: "";
-                                    background-color: $base-green-color;
+                                    background-color: $bg-base-color;
                                     height: 3px;
-                                    top: 26px;
+                                    top: 27px;
                                     display: block;
                                     width: 0;
                                     transition: all 0.2s;
@@ -105,11 +105,6 @@ header {
                                 &:hover {
                                     &::before {
                                         width: 40%;
-                                    }
-
-                                    a {
-                                        color: $base-green-color;
-
                                     }
                                 }
                             }

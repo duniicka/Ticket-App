@@ -1,0 +1,102 @@
+main {
+    section {
+        h2 {
+            margin-bottom: 50px;
+        }
+
+        .cards {
+            gap: 60px 30px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            .card {
+                background-color: $base-color1;
+                color: white;
+                border-radius: 5px;
+                overflow: hidden;
+                padding-bottom: 20px;
+
+                .img-part {
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .content-part {
+                    padding: 20px 12px;
+                    display: flex;
+
+                    i {
+                        padding-top: 6px;
+                        cursor: pointer;
+                    }
+                }
+
+                .button-part {
+                    button {
+                        margin: 0 auto;
+                        border: none;
+                        @include btnWHover;
+                        @include display-flex;
+                        gap: 6px;
+                        align-items: center;
+                        justify-content: center;
+
+                        i {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:991px) {
+    section {
+        .container {
+            .cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+}
+
+
+@media (max-width:768px) {
+    section {
+        .container {
+            .cards {
+            gap: 60px 20px;
+
+                grid-template-columns: repeat(2, 1fr);
+                .about-content {
+                    h2 {
+                        font-size: 20px;
+                    }
+                    p{
+                        font-size: 15px;
+                    }
+                }
+                .button-part{
+                    button{
+                        font-size: 13px;
+                        i{
+                            font-size: 10px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:320px) {
+    section {
+        .container {
+            .cards {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+}
