@@ -19,113 +19,68 @@
     <!-- Main css -->
     <link rel="stylesheet" href="./src/css/main.css">
     <title>Ticket app</title>
-
-    <style>
-        html,
-        body {
-            position: relative;
-            height: 100%;
-        }
-
-        body {
-            background: #eee;
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            color: #000;
-            margin: 0;
-            padding: 0;
-        }
-
-        .swiper1 {
-            width: 100%;
-            padding-top: 150px;
-            padding-bottom: 50px;
-            overflow: hidden;
-        }
-
-        .swiper1 .swiper-slide {
-            background-position: center;
-            background-size: cover;
-            width: 850px;
-        }
-
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .swiper-slide img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .ticket-type img {
-            width: 100%;
-            height: auto;
-        }
-
-        .ticket-type h1 {
-            font-size: 2rem;
-            text-align: center;
-            margin: 20px 0;
-        }
-
-
-
-        .swiper-pagination {
-            display: none !important;
-        }
-    </style>
 </head>
 
 <body>
 
     <header>
         <div class="container">
-            <div class="logo-header">
-                <a href=""><img src="./src/images/header-logo.png" alt="Logo"></a>
-            </div>
-            <nav class="list-part-header">
-                <ul class="ul-header">
-                    <li class="li-header"><a href="">Home</a></li>
-                    <li class="li-header"><a href="">Events</a></li>
-                    <li class="li-header"><a href="">Shop</a>
-                        <div class="dropdown">
-                            <ul class="ul-dropdown">
-                                <li class="dropdown-li"><a href=""><i class="fa-solid fa-cart-shopping"></i> Cart</a>
-                                </li>
-                                <li class="dropdown-li"><a href=""><i class="fa-solid fa-cart-shopping"></i> Cart</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="li-header"><a href="">Contact</a></li>
-                    <li class="li-header">
-                        <ul class="login-register">
-                            <li class="btn-bgreen li-header login-register-part">
-                                Login
-                            </li>
-                            <li class="btn-bgreen li-header login-register-part">
-                                Sign up
-                            </li>
-                        </ul>
-                    </li>
+          <div class="logo-header">
+            <a href=""><img src="./src/images/header-logo.png" alt="Logo"></a>
+          </div>
+          <nav class="list-part-header">
+            <ul class="ul-header">
+              <li class="li-header"><a href="">Home</a></li>
+              <li class="li-header"><a href="./events.html">Events</a>
+                <div class="dropdown">
+                  <ul class="ul-dropdown">
+                    <li class="dropdown-li"><a href="./popular.html">Popular events</a></li>
+                    <li class="dropdown-li"><a href="./tourism.html">Tourism</a></li>
+                    <li class="dropdown-li"><a href="./weekend.html">Weekend</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="li-header">
+                <ul class="login-register">
+                  <li class="btn-bgreen li-header login-register-part">
+                    <a href="./login.html">Login</a>
+                  </li>
+                  <li class="btn-bgreen li-header login-register-part">
+                    <a href="./register.html">Sign up</a>
+                  </li>
                 </ul>
-            </nav>
-            <div class="menu-bar-responsive">
-                <i class="fa-solid fa-bars"></i>
-            </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="menu-bar-responsive">
+            <i class="fa-solid fa-bars"></i>
+          </div>
         </div>
-    </header>
+      </header>
 
 
-   
+    <main>
+        <section>
+            <form class="login">
+                <div class="heading-form">
+                    <h1>Welcome!</h1>
+                </div>
+                <div class="input-field">
+                    <div class="userNameDiv">
+                        <label for="userName">Username</label>
+                        <input type="text" id="userName" name="userName">
+                    </div>
+                    <div class="passwordDiv">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password">
+                    </div>
+                    <p>Forgot your password? <a href="">Change now</a></p>
+                    <button>Login</button>
+                    <p>Don't you have an account? <a href="">Sign up now</a></p>
+                </div>
+            </form>
+        </section>
+    </main>
 
 </body>
 

@@ -38,15 +38,14 @@
 
     .swiper1 {
       width: 100%;
-      padding-top: 150px;
-      padding-bottom: 50px;
+      padding-top: 30px;
       overflow: hidden;
     }
 
     .swiper1 .swiper-slide {
       background-position: center;
       background-size: cover;
-      width: 850px;
+      width: 70%;
     }
 
     .swiper-slide {
@@ -85,7 +84,6 @@
 </head>
 
 <body>
-
   <header>
     <div class="container">
       <div class="logo-header">
@@ -94,23 +92,22 @@
       <nav class="list-part-header">
         <ul class="ul-header">
           <li class="li-header"><a href="">Home</a></li>
-          <li class="li-header"><a href="">Events</a></li>
-          <li class="li-header"><a href="">Shop</a>
+          <li class="li-header"><a href="./events.html">Events</a>
             <div class="dropdown">
               <ul class="ul-dropdown">
-                <li class="dropdown-li"><a href=""><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
-                <li class="dropdown-li"><a href=""><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                <li class="dropdown-li"><a href="./popular.html">Popular</a></li>
+                <li class="dropdown-li"><a href="./tourism.html">Tourism</a></li>
+                <li class="dropdown-li"><a href="./weekend.html">Weekend</a></li>
               </ul>
             </div>
           </li>
-          <li class="li-header"><a href="">Contact</a></li>
           <li class="li-header">
             <ul class="login-register">
               <li class="btn-bgreen li-header login-register-part">
                 <a href="./login.html">Login</a>
               </li>
               <li class="btn-bgreen li-header login-register-part">
-                <a href="">Sign up</a>
+                <a href="./register.html">Sign up</a>
               </li>
             </ul>
           </li>
@@ -122,7 +119,7 @@
     </div>
   </header>
 
-  <main>
+  <main class="home-main">
     <section class="concert-slides">
       <div class="swiper1 mySwiper">
         <div class="swiper-wrapper">
@@ -145,19 +142,19 @@
 
     <section class="ticket-types">
       <div class="ticket-type">
-        <a href="">
-          <h1>Popular events</h1>
+        <a href="./popular.html">
+          <h1>Popular</h1>
           <img src="./src/images/popular-events.jpg" alt="">
         </a>
       </div>
       <div class="ticket-type">
-        <a href="">
+        <a href="./tourism.html">
           <h1>Tourism</h1>
           <img src="./src/images/tourism.jpg" alt="">
         </a>
       </div>
       <div class="ticket-type">
-        <a href="">
+        <a href="./weekend.html">
           <h1>Weekend</h1>
           <img src="./src/images/weekend.jpg" alt="">
         </a>
@@ -165,32 +162,32 @@
     </section>
 
     <section class="movies-for-children">
-      <h2>Movies for kids</h2>
+      <h2 class="swiper2-heading">Movies for kids</h2>
       <div class="swiper2 mySwiper2">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <a href=""><img src="./src/images/secondslide1.jpg" style="max-width: 100%;" alt=""></a>
+            <a href="./tickets.html"><img src="./src/images/secondslide1.jpg" style="max-width: 100%;" alt=""></a>
           </div>
           <div class="swiper-slide">
-            <a href=""><img src="./src/images/secondslide2.jpg" alt=""></a>
+            <a href="./tickets.html"><img src="./src/images/secondslide2.jpg" alt=""></a>
           </div>
           <div class="swiper-slide">
-            <a href=""><img src="./src/images/secondslide3.jpg" alt=""></a>
+            <a href="./tickets.html"><img src="./src/images/secondslide3.jpg" alt=""></a>
           </div>
           <div class="swiper-slide">
-            <a href=""><img src="./src/images/secondslide4.jpg" alt=""></a>
+            <a href="./tickets.html"><img src="./src/images/secondslide4.jpg" alt=""></a>
           </div>
           <div class="swiper-slide">
-            <a href=""><img src="./src/images/secondslide5.jpg" alt=""></a>
+            <a href="./tickets.html"><img src="./src/images/secondslide5.jpg" alt=""></a>
           </div>
           <div class="swiper-slide">
-            <a href=""><img src="./src/images/secondslide6.jpg" alt=""></a>
+            <a href="./tickets.html"><img src="./src/images/secondslide6.jpg" alt=""></a>
           </div>
           <div class="swiper-slide">
-            <a href=""><img src="./src/images/secondslide7.jpg" alt=""></a>
+            <a href="./tickets.html"><img src="./src/images/secondslide7.jpg" alt=""></a>
           </div>
           <div class="swiper-slide">
-            <a href=""><img src="./src/images/secondslide8.jpg" alt=""></a>
+            <a href="./tickets.html"><img src="./src/images/secondslide8.jpg" alt=""></a>
           </div>
         </div>
         <div class="swiper-pagination"></div>
@@ -201,6 +198,7 @@
   <footer></footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module" src="./src/js/main.js"></script>
   <script>
     var swiper = new Swiper(".mySwiper", {
       effect: "coverflow",
@@ -228,16 +226,15 @@
 
     var swiper2 = new Swiper(".mySwiper2", {
       loop: true,
-      slidesPerView: "auto",  // This will allow the slide width to be adjusted automatically like in the first swiper
-      spaceBetween: 30,
+      loopAdditionalSlides: 1,
+      slidesPerView: "auto",  
+      spaceBetween: 20,
       autoplay: {
         delay: 2000,
       },
       speed: 600,
     });
   </script>
-
-
 </body>
 
 </html>

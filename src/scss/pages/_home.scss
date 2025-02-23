@@ -1,12 +1,17 @@
-main {
+.home-main {
+    padding: 7.2% 0;
+    padding-bottom: 0;
+
     .concert-slides {
-        background-image: url(../images/background.png);
-        background-repeat: no-repeat;
-        background-size: cover;
+        padding: 0;
+        background-color: $bg-base-color;
+        padding-bottom: 2%;
     }
 
     .ticket-types {
+        padding: 0;
         @include display-flex;
+        background-color: $bg-base-color;
         gap: 0;
 
         .ticket-type {
@@ -38,11 +43,11 @@ main {
                 position: absolute;
                 height: 6px;
                 width: 60px;
-                bottom: 7px;
+                bottom: 6px;
                 left: 50px;
                 content: "";
                 opacity: 0.8;
-                background-color: $base-green-color;
+                background-color: $base-color1;
             }
 
             &:hover::before {
@@ -60,39 +65,49 @@ main {
     }
 
     .movies-for-children {
+        background-color: $bg-base-color;
         overflow: hidden;
         padding: 70px 0;
 
-        h2 {
-            font-size: 35px;
-            margin-left: 50px;
-            color: $base-green-color;
-        }
+    }
+}
 
-        .swiper2 {
-            .swiper-wrapper {
+
+.swiper2 {
+    padding: 0 !important;
+
+    .swiper-wrapper {
+        width: 100%;
+        background-color: $bg-base-color;
+
+        .swiper-slide {
+            border-radius: 5px;
+            margin-left: 0;
+            overflow: hidden;
+            width: 25%;
+            background-color: $bg-base-color;
+
+            img {
+                position: relative;
+                transition: .2s;
                 width: 100%;
-                .swiper-slide {
-                    margin-left: 0;
-                    overflow: hidden;
-                    width: 25%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
 
-                    img {
-                        position: relative;
-                        transition: .2s;
-                        width: 100%;
-                        height: 100%;
-                    }
-
-                    &:hover img {
-                        transform: scale(1.2);
-                    }
-                }
+            &:hover img {
+                transform: scale(1.2);
             }
         }
     }
 }
 
+.swiper2-heading {
+    font-size: 35px;
+    margin-left: 50px;
+    color: white;
+}
 
 
 @keyframes green-card-hover1 {
@@ -117,7 +132,7 @@ main {
     100% {
         left: 0;
         width: 100%;
-        height: calc(100% - 7px);
+        height: calc(100% - 6px);
     }
 }
 
@@ -125,14 +140,14 @@ main {
     0% {
         left: 0;
         width: 100%;
-        height: calc(100% - 7px);
+        height: calc(100% - 6px);
 
     }
 
     100% {
         left: 50px;
         width: 60px;
-        height: calc(100% - 7px);
+        height: calc(100% - 6px);
     }
 }
 
@@ -140,7 +155,7 @@ main {
     0% {
         left: 50px;
         width: 60px;
-        height: calc(100% - 7px);
+        height: calc(100% - 6px);
     }
 
     100% {
@@ -150,56 +165,102 @@ main {
 
 
 @media (max-width:991px) {
-    .concert-slides {
-        .swiper1 {
-            .swiper-slide {
-                width: 700px;
-            }
-        }
-    }
+    .home-main {
+        padding-top: 10%;
 
-    .ticket-types {
-        .ticket-type {
-            h1 {
-                font-size: 29px !important;
+        .concert-slides {
+            padding: 0 !important;
+            padding-bottom: 2% !important;
+        }
+
+        .ticket-types {
+            padding: 0 !important;
+
+            .ticket-type {
+                h1 {
+                    font-size: 29px !important;
+                }
             }
         }
+
     }
 
     .swiper2 {
+        padding: 0 !important;
+
         .swiper-wrapper {
             .swiper-slide {
                 width: 32% !important;
             }
         }
     }
-
 }
 
 @media (max-width:768px) {
-    .concert-slides {
-        .swiper1 {
-            .swiper-slide {
-                width: 550px;
-            }
-        }
-    }
+    .home-main {
+        padding-top: 12%;
 
-    .ticket-types {
-        .ticket-type {
-            h1 {
-                font-size: 20px !important;
+        .concert-slides {
+            padding-top: 10px !important;
+        }
+
+        .ticket-types {
+            .ticket-type {
+                h1 {
+                    font-size: 20px !important;
+                }
             }
         }
+
     }
 }
 
 @media (max-width:576px) {
+    .home-main {
+        padding-top: 0 !important;
+
+        .concert-slides {
+            .swiper1 {
+                padding-top: 16% !important;
+            }
+        }
+
+        .swiper {
+            padding-top: 60px !important;
+        }
+
+        .movies-for-children {
+            padding: 20px 0 !important;
+        }
+    }
+
+    .swiper2 {
+        .swiper-wrapper {
+            margin: auto;
+            width: 100% !important;
+
+            .swiper-slide {
+                background-color: $bg-base-color;
+
+                img {
+                    height: 250px !important;
+                }
+            }
+        }
+    }
+
+    .swiper2-heading {
+        text-align: center;
+        margin-left: 0 !important;
+    }
+}
+
+@media (max-width: 320px) {
 
     .concert-slides {
         .swiper1 {
-            padding-top: 100px !important;
-            padding-bottom: 20px !important;
+            padding-top: 0px !important;
+            padding-bottom: 0 !important;
 
             .swiper-slide {
                 width: 100%;
@@ -226,46 +287,4 @@ main {
         }
     }
 
-    .swiper {
-        padding-top: 60px !important;
-        padding-bottom: 7px !important;
-    }
-
-    .movies-for-children {
-        padding: 20px 0 !important;
-
-        h2 {
-            text-align: center;
-            margin-left: 0 !important;
-        }
-
-        .swiper2 {
-            .swiper-wrapper {
-                margin: auto;
-                width: 100% !important;
-                .swiper-slide {
-                    width: 100% !important;
-                    background-color: rgb(238, 238, 238);
-
-                    img {
-                        height: 420px !important;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 320px) {
-
-    .concert-slides {
-        .swiper1 {
-            padding-top: 65px !important;
-            padding-bottom: 10px !important;
-
-            .swiper-slide {
-                width: 100%;
-            }
-        }
-    }
 }
