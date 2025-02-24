@@ -1,0 +1,207 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "role": "admin",
+      "username": "admin_tech",
+      "email": "admin_tech@example.com",
+      "password": "hashed_password_1",
+      "balance": 500,
+      "profilePictureURL": "https://example.com/images/admin-profile.jpg",
+      "favorites": [
+        {
+          "id": 1,
+          "eventId": 1
+        },
+        {
+          "id": 2,
+          "eventId": 2
+        }
+      ],
+      "accountCreationDate": "2022-01-01",
+      "totalSpentMoney": 0
+    },
+    {
+      "id": "2",
+      "role": "user",
+      "username": "jane_doe",
+      "email": "jane.doe@example.com",
+      "password": "hashed_password_2",
+      "balance": 100,
+      "profilePictureURL": "https://example.com/images/jane-profile.jpg",
+      "favorites": [
+        {
+          "id": 3,
+          "eventId": 3
+        }
+      ],
+      "accountCreationDate": "2023-05-10",
+      "totalSpentMoney": 50
+    },
+    {
+      "id": "3",
+      "role": "user",
+      "username": "john_smith",
+      "email": "john.smith@example.com",
+      "password": "hashed_password_3",
+      "balance": 200,
+      "profilePictureURL": "https://example.com/images/john-profile.jpg",
+      "favorites": [
+        {
+          "id": 4,
+          "eventId": 4
+        }
+      ],
+      "accountCreationDate": "2023-02-20",
+      "totalSpentMoney": 30
+    },
+    {
+      "id": "4",
+      "role": "user",
+      "username": "alice_jones",
+      "email": "alice.jones@example.com",
+      "password": "hashed_password_4",
+      "balance": 300,
+      "profilePictureURL": "https://example.com/images/alice-profile.jpg",
+      "favorites": [
+        {
+          "id": 5,
+          "eventId": 5
+        }
+      ],
+      "accountCreationDate": "2022-11-15",
+      "totalSpentMoney": 150
+    },
+    {
+      "id": "5",
+      "role": "user",
+      "username": "bob_williams",
+      "email": "bob.williams@example.com",
+      "password": "hashed_password_5",
+      "balance": 150,
+      "profilePictureURL": "https://example.com/images/bob-profile.jpg",
+      "favorites": [
+        {
+          "id": 6,
+          "eventId": 6
+        }
+      ],
+      "accountCreationDate": "2021-06-05",
+      "totalSpentMoney": 120
+    },
+    {
+      "id": "6",
+      "role": "user",
+      "username": "charlie_brown",
+      "email": "charlie.brown@example.com",
+      "password": "hashed_password_6",
+      "balance": 400,
+      "profilePictureURL": "https://example.com/images/charlie-profile.jpg",
+      "favorites": [
+        {
+          "id": 7,
+          "eventId": 7
+        }
+      ],
+      "accountCreationDate": "2023-01-30",
+      "totalSpentMoney": 75
+    },
+    {
+      "id": "7",
+      "role": "user",
+      "username": "user_user",
+      "email": "user.user@example.com",
+      "password": "hashed_password_7",
+      "balance": 250,
+      "profilePictureURL": "https://example.com/images/support-profile.jpg",
+      "favorites": [],
+      "accountCreationDate": "2022-09-10",
+      "totalSpentMoney": 0
+    },
+    {
+      "id": "8",
+      "role": "user",
+      "username": "david_martin",
+      "email": "david.martin@example.com",
+      "password": "hashed_password_8",
+      "balance": 50,
+      "profilePictureURL": "https://example.com/images/david-profile.jpg",
+      "favorites": [
+        {
+          "id": 8,
+          "eventId": 8
+        }
+      ],
+      "accountCreationDate": "2022-03-25",
+      "totalSpentMoney": 20
+    },
+    {
+      "id": "9",
+      "role": "user",
+      "username": "emily_clark",
+      "email": "emily.clark@example.com",
+      "password": "hashed_password_9",
+      "balance": 600,
+      "profilePictureURL": "https://example.com/images/emily-profile.jpg",
+      "favorites": [
+        {
+          "id": 9,
+          "eventId": 9
+        }
+      ],
+      "accountCreationDate": "2023-07-18",
+      "totalSpentMoney": 0
+    },
+    {
+      "id": "10",
+      "role": "user",
+      "username": "frank_harris",
+      "email": "frank.harris@example.com",
+      "password": "hashed_password_10",
+      "balance": 0,
+      "profilePictureURL": "https://example.com/images/frank-profile.jpg",
+      "favorites": [],
+      "accountCreationDate": "2023-08-30",
+      "totalSpentMoney": 50
+    },
+    {
+      "id": "45a4",
+      "role": "user",
+      "username": "salam",
+      "email": "salam@gmail.com",
+      "password": "salam",
+      "accountCreationDate": "2025-02-24",
+      "totalSpentMoney": 0
+    }
+  ],
+  "tickets": [
+    {
+      "ticket_id": 101,
+      "user_id": 1,
+      "subject": "Website issue",
+      "status": "open",
+      "priority": "high",
+      "description": "There is an issue with the homepage layout.",
+      "id": "ea61"
+    },
+    {
+      "ticket_id": 102,
+      "user_id": 2,
+      "subject": "Login problem",
+      "status": "closed",
+      "priority": "medium",
+      "description": "Unable to log into the account with correct credentials.",
+      "id": "e20c"
+    },
+    {
+      "ticket_id": 103,
+      "user_id": 3,
+      "subject": "Bug report",
+      "status": "open",
+      "priority": "low",
+      "description": "Found a bug in the application that causes crashes.",
+      "id": "676a"
+    }
+  ],
+  "events": []
+}
