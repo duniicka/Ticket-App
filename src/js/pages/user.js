@@ -1,16 +1,17 @@
-
 import { endpoint } from "../api and methods/api.js";
 import controller from "../api and methods/request.js";
+
 window.addEventListener("load", async function (e) {
     const userID = JSON.parse(this.localStorage.getItem("userID"));
     const apiUsers = await controller.getAll(endpoint.users);
     const checkValidLogin = apiUsers.data.find((x) => x.id == userID);
     const aboutAccount = document.querySelector(".aboutAccount");
+
     aboutAccount.innerHTML = `
-   <p class="userNameP">Username: <span class="username">${checkValidLogin.username}</span></p>
-                        <p class="emailP">Email: <span class="email">${checkValidLogin.email}</span></p>
-                        <p class="balanceP">Balance: <span class="email">${checkValidLogin.balance}</span></p>
-                        <p class="spentMoneyP">Spent money: <span class="spentMoney">${checkValidLogin.totalSpentMoney}</span></p>
+        <p class="userNameP">Username: <span class="username">${checkValidLogin.username}</span></p>
+        <p class="emailP">Email: <span class="email">${checkValidLogin.email}</span></p>
+        <p class="balanceP">Balance: <span class="balance">${checkValidLogin.balance}</span></p>
+        <p class="spentMoneyP">Spent money: <span class="spentMoney">${checkValidLogin.totalSpentMoney}</span></p>
     `;
 
     const updatePassword = document.querySelector(".updatePassword");
@@ -62,24 +63,8 @@ window.addEventListener("load", async function (e) {
                         password: input2
                     };
                     const updateResponse = await controller.update(endpoint.users, updatedData, userID);
-                    if (updateResponse.error) {
-                        Swal.fire({
-                            title: "Error",
-                            text: "Failed to update password",
-                            icon: "error",
-                            background: "rgb(59, 59, 59)",
-                            color: "white",
-                        });
-                    } else {
-                        Swal.fire({
-                            title: "Saved!",
-                            text: "Your password has been updated.",
-                            icon: "success",
-                            background: "rgb(59, 59, 59)",
-                            color: "white",
-                        });
-                        checkValidLogin.password = input2;
-                    }
+                    window.location.reload(); 
+
                 } else if (confirmResult.isDenied) {
                     Swal.fire({
                         text: "Changes are not saved",
@@ -115,7 +100,7 @@ window.addEventListener("load", async function (e) {
             confirmButtonText: 'Update profile',
         }).then(async (result) => {
             if (result.isConfirmed) {
-                const { input1, input2 } = result.value
+                const { input1, input2 } = result.value;
                 const confirmResult = await Swal.fire({
                     background: "rgb(59, 59, 59)",
                     color: "white",
@@ -132,26 +117,7 @@ window.addEventListener("load", async function (e) {
                         email: input2,
                     };
                     const updateResponse = await controller.update(endpoint.users, updatedData, userID);
-                    if (updateResponse.error) {
-                        Swal.fire({
-                            title: "Error",
-                            text: "Failed to update profile",
-                            icon: "error",
-                            background: "rgb(59, 59, 59)",
-                            color: "white",
-                        });
-                    } else {
-                        Swal.fire({
-                            title: "Saved!",
-                            text: "Your profile has been updated.",
-                            icom: "success",
-                            background: "rgb(59, 59, 59)",
-                            color: "white",
-                        });
-                        checkValidLogin.username = input1;
-                        checkValidLogin.email = input2
-                        location.reload();
-                    }
+                    window.location.reload(); 
                 } else if (confirmResult.isDenied) {
                     Swal.fire({
                         text: "Changes are not saved",
@@ -162,5 +128,5 @@ window.addEventListener("load", async function (e) {
                 }
             }
         });
-    })
+    });
 });

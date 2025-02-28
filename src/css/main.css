@@ -38,6 +38,10 @@
   }
 }
 
+.addedFavHeart {
+  color: red;
+}
+
 header {
   position: fixed;
   width: 100%;
