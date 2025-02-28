@@ -1,0 +1,49 @@
+{
+    "rewrites": [
+        {
+            "source": "/index",
+            "destination": "/index.html"
+        },
+        {
+            "source": "/user",
+            "destination": "/user.html"
+        },
+        {
+            "source": "/login",
+            "destination": "/login.html"
+        },
+        {
+            "source": "/register",
+            "destination": "/register.html"
+        },
+        {
+            "source": "/buy",
+            "destination": "/buy.html"
+        },
+        {
+            "source": "/tickets",
+            "destination": "/tickets.html"
+        },
+        {
+            "source": "/events",
+            "destination": "/events.html"
+        },
+        {
+            "source": "/favourites",
+            "destination": "/favourites.html"
+        },
+        {
+            "source": "/popular",
+            "destination": "/popular.html"
+        },
+        {
+            "source": "/tourism",
+            "destination": "/tourism.html"
+        },
+        
+        {
+            "source": "/weekend",
+            "destination": "/weekend.html"
+        }
+    ]
+}
