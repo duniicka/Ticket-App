@@ -21,8 +21,8 @@ export async function getById(endpoints, id) {
         loading: false,
         error: null,
     }
-
-    await axios.get(API_BASE_URL + endpoints + `${id}`)
+    
+    await axios.get(API_BASE_URL + endpoints + `/${id}`)
         .then((response) => {
             result.data = response.data
         })
@@ -50,20 +50,32 @@ export async function post(endpoints, payload) {
 
 // update data by id
 export async function update(endpoints, payload, id) {
-    const result = {
-        data: null,
-        loading: false,
-        error: null,
+    const result = { loading: true, data: null, error: null };
+    try {
+        const response = await fetch(API_BASE_URL + endpoints + `/${id}`, {
+            
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload),
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        result.data = data;
+    } catch (err) {
+        result.error = err;
+    } finally {
+        result.loading = false;
     }
 
-    await axios.patch(API_BASE_URL + endpoints + `/${id}`, payload)
-        .then((response) => {
-            result.data = response.data
-        })
-        .catch((err) => result.error = err)
-        .finally(() => result.loading = false)
-    return result
+    return result;
 }
+
 
 // delete data by id
 export async function deleteOne(endpoints, id) {
@@ -73,7 +85,7 @@ export async function deleteOne(endpoints, id) {
         error: null,
     }
 
-    await axios.delete(API_BASE_URL + endpoints + `${id}`)
+    await axios.delete(API_BASE_URL + endpoints + `/${id}`)
         .then((response) => {
             result.data = response.data
         })
