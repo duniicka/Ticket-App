@@ -1,0 +1,36 @@
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background-color: $base-color1;
+    color: white;
+    a{
+        color: white;
+    }
+    .links{
+        display: flex;
+        gap: 30px;
+    }
+}
+
+@media (max-width:768px) {
+    footer{
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media (max-width:576px) {
+    footer{
+    padding: 20px 30px;
+        
+    a{
+        color: white;
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    }
+}

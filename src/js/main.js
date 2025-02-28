@@ -1,3 +1,4 @@
+import "tailwindcss";
 import {hover} from "./hover-ticket/hover";
 hover()
 import controller from "./api and methods/request";
