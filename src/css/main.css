@@ -248,6 +248,40 @@ header .container .menu-bar-responsive .fa-bars {
     display: block;
   }
 }
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background-color: rgb(17, 17, 17);
+  color: white;
+}
+footer a {
+  color: white;
+}
+footer .links {
+  display: flex;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+@media (max-width: 576px) {
+  footer {
+    padding: 20px 30px;
+  }
+  footer a {
+    color: white;
+  }
+  footer .links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}
 .home-main {
   padding: 7.2% 0;
   padding-bottom: 0;
@@ -748,22 +782,8 @@ main section .cards .card .button-part button i {
 main .aboutProfile {
   margin: auto;
   width: 62%;
-  height: 100vh;
+  height: 110vh;
   position: relative;
-}
-main .aboutProfile .profileImg {
-  cursor: pointer;
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
-  border-radius: 50%;
-  overflow: hidden;
-}
-main .aboutProfile .profileImg img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 main .aboutProfile .content {
   top: 50%;
@@ -819,9 +839,12 @@ main .aboutProfile .content .forCenter .aboutAccount p {
 }
 @media (max-width: 576px) {
   main .aboutProfile {
-    width: 85%;
+    width: 93%;
   }
-  main .aboutProfile .forCenter {
-    width: 100%;
+  main .aboutProfile .content .forCenter {
+    width: 95%;
+  }
+  main .aboutProfile .content .forCenter .editBtn {
+    font-size: 11.8px;
   }
 }/*# sourceMappingURL=main.css.map */
