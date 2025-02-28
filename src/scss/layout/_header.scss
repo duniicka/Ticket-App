@@ -2,8 +2,9 @@ header {
     position: fixed;
     width: 100%;
     z-index: 999;
-    
+
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
     .container {
         @include display-flex;
         justify-content: space-between;
@@ -78,6 +79,7 @@ header {
                                 padding: 3px 0;
                                 border-bottom: 1px solid rgba(255, 255, 255, 0.297);
                                 padding-bottom: 5px;
+
                                 &:last-child {
                                     border: none
                                 }
@@ -135,6 +137,46 @@ header {
                         }
                     }
                 }
+
+                .profileLogOut {
+                    padding: 0;
+                    width: 40px;
+                    height: 40px;
+                    position: relative;
+
+                    border-radius: 50%;
+                    overflow: hidden;
+                    .profilePhotoDiv {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        // overflow: hidden;
+                        .profilePhoto {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+
+                            img {
+                                top: 0;
+
+                                position: absolute;
+                                border: 1px solid white;
+                                width: 100%;
+                                height: 100%;
+                                z-index: 999;
+                                object-position: center;
+                                // object-fit: cover;
+                            }
+                        }
+                    }
+                }
+
+                #logOut {
+                    background-color: $bg-base-color !important;
+                    border: none;
+                    color: white;
+                    cursor: pointer;
+                }
             }
         }
 
@@ -173,6 +215,7 @@ header {
 
                     .li-header {
                         font-size: 15px;
+
                         .login-register {
                             gap: 10px;
 
@@ -190,11 +233,12 @@ header {
 @media (max-width:576px) {
     header {
         .container {
-            .logo-header{
-                img{
+            .logo-header {
+                img {
                     width: 4.5rem !important;
                 }
             }
+
             .list-part-header {
                 display: none;
             }
@@ -209,11 +253,12 @@ header {
 @media (max-width:320px) {
     header {
         .container {
-            .logo-header{
-                img{
+            .logo-header {
+                img {
                     width: 3rem !important;
                 }
             }
+
             .list-part-header {
                 display: none;
             }

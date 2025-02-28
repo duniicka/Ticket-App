@@ -47,8 +47,8 @@ registerForm.addEventListener('submit', async (e) => {
             Swal.fire({
                 title: `Registered succesfully!`,
                 background: "rgb(59, 59, 59)",
-                icon: "success",
                 color: "white",
+                icon: "success",
                 didOpen: () => {
                     const confirmButton = Swal.getConfirmButton();
                     confirmButton.style.backgroundColor = 'rgb(17, 17, 17)';

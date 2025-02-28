@@ -21,21 +21,6 @@
   <title>Ticket app</title>
 
   <style>
-    html,
-    body {
-      position: relative;
-      height: 100%;
-    }
-
-    body {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
-
     .swiper1 {
       width: 100%;
       padding-top: 30px;
@@ -47,16 +32,6 @@
       background-size: cover;
       width: 70%;
     }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
     .swiper-slide img {
       display: block;
       width: 100%;
@@ -73,12 +48,6 @@
       font-size: 2rem;
       text-align: center;
       margin: 20px 0;
-    }
-
-
-
-    .swiper-pagination {
-      display: none !important;
     }
   </style>
 </head>
@@ -104,7 +73,8 @@
           <li class="li-header">
             <ul class="login-register">
               <li class="btn-bgreen li-header login-register-part">
-                <a href="./login.html">Login</a>
+                <a href="./login.html">Login
+                </a>
               </li>
               <li class="btn-bgreen li-header login-register-part">
                 <a href="./register.html">Sign up</a>
@@ -136,7 +106,6 @@
             <img src="./src/images/slide4.jpg" />
           </div>
         </div>
-        <div class="swiper-pagination"></div>
       </div>
     </section>
 
@@ -162,35 +131,10 @@
     </section>
 
     <section class="movies-for-children">
-      <h2 class="swiper2-heading">Movies for kids</h2>
+      <h2 class="swiper2-heading" id="slide-heading">Movies for kids</h2>
       <div class="swiper2 mySwiper2">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a href="./tickets.html"><img src="./src/images/secondslide1.jpg" style="max-width: 100%;" alt=""></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="./tickets.html"><img src="./src/images/secondslide2.jpg" alt=""></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="./tickets.html"><img src="./src/images/secondslide3.jpg" alt=""></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="./tickets.html"><img src="./src/images/secondslide4.jpg" alt=""></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="./tickets.html"><img src="./src/images/secondslide5.jpg" alt=""></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="./tickets.html"><img src="./src/images/secondslide6.jpg" alt=""></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="./tickets.html"><img src="./src/images/secondslide7.jpg" alt=""></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="./tickets.html"><img src="./src/images/secondslide8.jpg" alt=""></a>
-          </div>
+        <div class="swiper-wrapper" id="swiper-wrapper">
         </div>
-        <div class="swiper-pagination"></div>
       </div>
     </section>
   </main>
@@ -199,42 +143,13 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script type="module" src="./src/js/main.js"></script>
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      loop: true,
-      slidesPerView: "auto",
-      autoplay: {
-        delay: 2000,
-      },
-      speed: 600,
-
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-
-    var swiper2 = new Swiper(".mySwiper2", {
-      loop: true,
-      loopAdditionalSlides: 1,
-      slidesPerView: "auto",  
-      spaceBetween: 20,
-      autoplay: {
-        delay: 2000,
-      },
-      speed: 600,
-    });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="module" src="./src/js/header/header.js"></script>
 </body>
 
+
+<!--       _
+       .__(.)< (MEOW)
+        \___)   
+ ~~~~~~~~~~~~~~~~~~-->
 </html>

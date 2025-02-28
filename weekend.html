@@ -26,44 +26,44 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-          <div class="logo-header">
-            <a href=""><img src="./src/images/header-logo.png" alt="Logo"></a>
-          </div>
-          <nav class="list-part-header">
-            <ul class="ul-header">
-              <li class="li-header"><a href="./index.html">Home</a></li>
-              <li class="li-header"><a href="./events.html">Events</a>
-                <div class="dropdown">
-                  <ul class="ul-dropdown">
-                    <li class="dropdown-li"><a href="./popular.html">Popular</a></li>
-                    <li class="dropdown-li"><a href="./tourism.html">Tourism</a></li>
-                    <li class="dropdown-li"><a href="./weekend.html">Weekend</a></li>
-                  </ul>
-                </div>
+  <header>
+    <div class="container">
+      <div class="logo-header">
+        <a href=""><img src="./src/images/header-logo.png" alt="Logo"></a>
+      </div>
+      <nav class="list-part-header">
+        <ul class="ul-header">
+          <li class="li-header"><a href="./index.html">Home</a></li>
+          <li class="li-header"><a href="./events.html">Events</a>
+            <div class="dropdown">
+              <ul class="ul-dropdown">
+                <li class="dropdown-li"><a href="./popular.html">Popular</a></li>
+                <li class="dropdown-li"><a href="./tourism.html">Tourism</a></li>
+                <li class="dropdown-li"><a href="./weekend.html">Weekend</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="li-header">
+            <ul class="login-register">
+              <li class="btn-bgreen li-header login-register-part">
+                <a href="./login.html">Login</a>
               </li>
-              <li class="li-header">
-                <ul class="login-register">
-                  <li class="btn-bgreen li-header login-register-part">
-                    <a href="./login.html">Login</a>
-                  </li>
-                  <li class="btn-bgreen li-header login-register-part">
-                    <a href="./register.html">Sign up</a>
-                  </li>
-                </ul>
+              <li class="btn-bgreen li-header login-register-part">
+                <a href="./register.html">Sign up</a>
               </li>
             </ul>
-          </nav>
-          <div class="menu-bar-responsive">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-        </div>
-      </header>
+          </li>
+        </ul>
+      </nav>
+      <div class="menu-bar-responsive">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+  </header>
 
   <main>
     <section>
-      <h2 class="swiper2-heading">Popular</h2>
+      <h2 class="swiper2-heading">Weekend</h2>
       <div class="container">
         <div class="cards">
           <div class="card">
@@ -188,5 +188,10 @@
       </div>
     </section>
   </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="module" src="./src/js/header/header.js"></script>
+  <script type="module" src="./src/js/pages/weekend.js"></script>
 
 </html>

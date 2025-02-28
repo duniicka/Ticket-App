@@ -20,20 +20,6 @@
     <title>Ticket app</title>
 
     <style>
-      html,
-      body {
-        position: relative;
-        height: 100%;
-      }
-  
-      body {
-        background: #eee;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color: #000;
-        margin: 0;
-        padding: 0;
-      }
   
       .swiper-slide {
         text-align: center;
@@ -49,12 +35,6 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-      }
-  
-  
-  
-      .swiper-pagination {
-        display: none !important;
       }
     </style>
 </head>
@@ -94,99 +74,24 @@
 </header>
     <main>
         <section class="swiper2-section popularEvents">
-        <h2 class="swiper2-heading">Popular</h2>
+        <h2 class="swiper2-heading swiper-heading1" >Popular</h2>
         <div class="swiper2 mySwiper2">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="./tickets.html"><img src="./src/images/secondslide1.jpg" style="max-width: 100%;" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="./tickets.html"><img src="./src/images/secondslide2.jpg" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="./tickets.html"><img src="./src/images/secondslide3.jpg" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="./tickets.html"><img src="./src/images/secondslide4.jpg" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="./tickets.html"><img src="./src/images/secondslide5.jpg" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="./tickets.html"><img src="./src/images/secondslide6.jpg" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="./tickets.html"><img src="./src/images/secondslide7.jpg" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="./tickets.html"><img src="./src/images/secondslide8.jpg" alt=""></a>
-            </div>
+          <div class="swiper-wrapper swiper-wrapper1">
           </div>
-          <div class="swiper-pagination"></div>
         </div>
       </section>
       <section class="swiper2-section tourism">
-        <h2 class="swiper2-heading">Tourism</h2>
+        <h2 class="swiper2-heading swiper-heading2">Tourism</h2>
         <div class="swiper2 mySwiper2">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="./tickets.html"><img src="./src/images/secondslide1.jpg" style="max-width: 100%;" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="./tickets.html"><img src="./src/images/secondslide2.jpg" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="./tickets.html"><img src="./src/images/secondslide3.jpg" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="./tickets.html"><img src="./src/images/secondslide4.jpg" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="./tickets.html"><img src="./src/images/secondslide5.jpg" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="./tickets.html"><img src="./src/images/secondslide6.jpg" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="./tickets.html"><img src="./src/images/secondslide7.jpg" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="./tickets.html"><img src="./src/images/secondslide8.jpg" alt=""></a>
-            </div>
+          <div class="swiper-wrapper swiper-wrapper2">
           </div>
-          <div class="swiper-pagination"></div>
         </div>
       </section>
       <section class="swiper2-section weekend">
-        <h2 class="swiper2-heading">Weekend</h2>
+        <h2 class="swiper2-heading swiper-heading3">Weekend</h2>
         <div class="swiper2 mySwiper2">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="./tickets.html"><img src="./src/images/secondslide1.jpg" style="max-width: 100%;" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="./tickets.html"><img src="./src/images/secondslide2.jpg" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="./tickets.html"><img src="./src/images/secondslide3.jpg" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="./tickets.html"><img src="./src/images/secondslide4.jpg" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="./tickets.html"><img src="./src/images/secondslide5.jpg" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="./tickets.html"><img src="./src/images/secondslide6.jpg" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="./tickets.html"><img src="./src/images/secondslide7.jpg" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="./tickets.html"><img src="./src/images/secondslide8.jpg" alt=""></a>
-            </div>
+          <div class="swiper-wrapper swiper-wrapper3">
           </div>
-          <div class="swiper-pagination"></div>
         </div>
       </section>
     </main>
@@ -196,13 +101,16 @@
     <script>
       var swiper2 = new Swiper(".mySwiper2", {
         loop: true,
-        slidesPerView: "auto",  // This will allow the slide width to be adjusted automatically like in the first swiper
-        spaceBetween: 30,
+        slidesPerView: "auto",  
+        spaceBetween: 20,
         autoplay: {
           delay: 2000,
         },
         speed: 600,
       });
     </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="module" src="./src/js/header/header.js"></script>
+  <script type="module" src="./src/js/pages/events.js"></script>
 </body>
 </html>
