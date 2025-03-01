@@ -7,13 +7,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   cards.innerHTML = "";
   const events = await controller.getAll(endpoint.events);
 
-  // Retrieve the saved favorite event IDs from localStorage
   let favoriteEvents = JSON.parse(localStorage.getItem("favoriteEvents")) || [];
 
-  // Iterate over each event and add it to the page
   events.data.forEach((ev) => {
     if (ev.category.toLowerCase().includes("weekend")) {
-      // Add event card to the DOM
       cards.innerHTML += `
         <div class="card">
           <div class="img-part">
